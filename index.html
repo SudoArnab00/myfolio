@@ -57,13 +57,72 @@
     }
     .badge-card:nth-child(1) { animation-delay: 0.1s; }
     .badge-card:nth-child(2) { animation-delay: 0.2s; }
-    .badge-card:nth-child(n+3)) { animation-delay: calc((var(--n) - 2) * 0.15s); }
+    .badge-card:nth-child(n+3) { animation-delay: 0.3s; }
 
     .glow-title {
       font-size:1.6rem;
       color:var(--accent-dark);
       margin:60px 0 20px;
       animation: fadeInDown 1.6s ease-out;
+    }
+    .tryhackme-section {
+      max-width: 560px;
+      margin: 40px auto 10px;
+      text-align: left;
+    }
+
+    .tryhackme-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .tryhackme-card {
+      background:
+        radial-gradient(circle at top left, rgba(0,212,255,0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(57,255,140,0.22), transparent 55%),
+        var(--card);
+      border-radius: 22px;
+      padding: 18px 20px 20px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+      border: 1px solid rgba(0,212,255,0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      backdrop-filter: blur(6px);
+    }
+
+    .tryhackme-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      color: #1a1a1a;
+    }
+
+    .tryhackme-header span:first-child {
+      font-weight: 600;
+    }
+
+    .tryhackme-tag {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,212,255,0.6);
+      background: rgba(0,212,255,0.06);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .tryhackme-iframe {
+      width: 100%;
+      min-height: 260px;
+      border: none;
+      border-radius: 16px;
+      background: #050816;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
     footer {
@@ -91,10 +150,20 @@
       Cloud Security Engineer (PCSE 2026) • Blue/Red Team • South Africa<br>
       Turning coffee into flags → <a href="https://x.com/Aby_x0x0" target="_blank">@Aby_x0x0</a>
     </p>
-    <p class="badge-card">
-      <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=394843" style='border:none;'></iframe>
-    </p>
-
+    <div class="tryhackme-section">
+      <div class="tryhackme-label">TryHackMe</div>
+      <div class="tryhackme-card">
+        <div class="tryhackme-header">
+          <span>Hands-on labs & CTF progress</span>
+          <span class="tryhackme-tag">Live badge</span>
+        </div>
+        <iframe
+          class="tryhackme-iframe"
+          src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=394843"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
     <div class="glow-title">Certifications & Badges</div>
 
     <div class="badges">
