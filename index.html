@@ -82,14 +82,13 @@
 }
 
 .tryhackme-card {
-  background:
-    radial-gradient(circle at top left, rgba(0,212,255,0.18), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(57,255,140,0.15), transparent 55%),
-    var(--card);
-  border-radius: 16px;                 /* tighter */
-  padding: 14px 16px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-  border: 1px solid rgba(0,212,255,0.35);
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+  min-height: 180px;       /* gives the box some breathing room */
+  padding: 0;              /* optional: removes uneven spacing */
+  position: relative;
+  flex-direction: column;  /* so header stays above iframe */
 }
 
 .tryhackme-header {
