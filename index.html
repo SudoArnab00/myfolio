@@ -65,66 +65,63 @@
       margin:60px 0 20px;
       animation: fadeInDown 1.6s ease-out;
     }
-    .tryhackme-section {
-      max-width: 560px;
-      margin: 40px auto 10px;
-      text-align: left;
-    }
 
-    .tryhackme-label {
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 10px;
-    }
+/* Tighter, cleaner TryHackMe block */
+.tryhackme-section {
+  max-width: 420px;     /* reduced from 560px */
+  margin: 40px auto 0;
+}
 
-    .tryhackme-card {
-      background:
-        radial-gradient(circle at top left, rgba(0,212,255,0.25), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(57,255,140,0.22), transparent 55%),
-        var(--card);
-      border-radius: 22px;
-      padding: 18px 20px 20px;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
-      border: 1px solid rgba(0,212,255,0.45);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      backdrop-filter: blur(6px);
-    }
+.tryhackme-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 8px;
+}
 
-    .tryhackme-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.95rem;
-      color: #1a1a1a;
-    }
+.tryhackme-card {
+  background:
+    radial-gradient(circle at top left, rgba(0,212,255,0.18), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(57,255,140,0.15), transparent 55%),
+    var(--card);
+  border-radius: 16px;                 /* tighter */
+  padding: 14px 16px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,212,255,0.35);
+}
 
+.tryhackme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.tryhackme-tag {
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,212,255,0.6);
+  background: rgba(0,212,255,0.06);
+  letter-spacing: 0.06em;
+}
+
+.tryhackme-iframe {
+  width: 100%;
+  height: 120px;        /* reduced from min-height 260px */
+  border: none;
+  border-radius: 10px;
+  background: #050816;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+    
     .tryhackme-header span:first-child {
       font-weight: 600;
     }
-
-    .tryhackme-tag {
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,212,255,0.6);
-      background: rgba(0,212,255,0.06);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .tryhackme-iframe {
-      width: 100%;
-      min-height: 260px;
-      border: none;
-      border-radius: 16px;
-      background: #050816;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-    }
-
+    
     footer {
       margin-top:120px;
       color:#666;
